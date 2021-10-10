@@ -10,7 +10,7 @@ import {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 shadow-md p-5 md:px-10">
+    <header className="sticky top-0 z-50 grid grid-cols-3 shadow-md p-5 bg-white md:px-10">
       <div className="relative flex items-center h-10 cursor-pointer my-auto">
         <Image
           src={airbnb_logo}
