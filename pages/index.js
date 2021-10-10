@@ -11,6 +11,12 @@ export default function Home() {
       </Head>
       <Header />
       <Banner />
+      <main className="max-w-7xl mx-auto px-8 sm:px-16">
+        <section className="pt-6 ">
+          <h2 className="text-4xl font-semibold pb-5">Explore near by:</h2>
+          {/*Pull API data from cards */}
+        </section>
+      </main>
     </div>
   );
 }
