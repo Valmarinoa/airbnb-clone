@@ -2,13 +2,15 @@ import Image from "next/image";
 import airbnb_logo from "../components/media/airbnb_logo.png";
 import {
   SearchIcon,
-  UsersIcon,
   MenuIcon,
   UserCircleIcon,
   GlobeAltIcon,
 } from "@heroicons/react/solid";
+import React, { useState } from "react";
 
 function Header() {
+  const [searchInput, setSearchInput] = useState("");
+
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 shadow-md p-5 bg-white md:px-10">
       <div className="relative flex items-center h-10 cursor-pointer my-auto">
@@ -24,6 +26,8 @@ function Header() {
           type="text"
           className="flex-grow pl-5 bg-transparent outline-none text-sm placeholder-gray-400 text-gray-600"
           placeholder="Start your search"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
         />
         <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
