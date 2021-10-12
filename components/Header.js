@@ -29,6 +29,10 @@ function Header() {
     setEndDate(ranges.selection.endDate);
   };
 
+  const resetInput = () => {
+    setSearchInput("");
+  };
+
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 shadow-md p-5 bg-white md:px-10">
       <div className="relative flex items-center h-10 cursor-pointer my-auto">
@@ -81,7 +85,9 @@ function Header() {
             />
           </div>
           <div className="flex">
-            <button className="flex-grow text-gray-400">Cancel</button>
+            <button onClick={resetInput} className="flex-grow text-gray-400">
+              Cancel
+            </button>
             <button className="flex-grow text-red-400">Search</button>
           </div>
           {/* implement Date Picker as an npm(package) called react-date-range*/}
